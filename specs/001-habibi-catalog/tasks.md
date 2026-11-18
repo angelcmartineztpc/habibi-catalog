@@ -52,3 +52,4 @@
 - [x] T028 [US3/US5] Update Vitest test suite (`src/test/App.test.tsx`), run `npm run test`, `npm run lint`, `npm run build`, and redeploy to `https://habibi-catalog.pages.dev`
 - [x] T029 [US3] Align `ProductDetailDrawer` layout to Figma `Detalles #2` (`175:96966`: `566px` drawer width, side-by-side bottle inside right column, bottom price + `[ − 1 + ]` stepper + CTA), re-verify tests/lint/build, push to GitHub, and redeploy to Cloudflare Pages
 - [x] T030 [US2] Set `HomePage` (`6:114`) as the default initial landing route at `/` (with `/catalogo` for `CatalogPage`), verify tests/lint/build, push to GitHub, and redeploy to `https://habibi-catalog.pages.dev`
+- [x] T031 [US2] Replace `public/assets/figma/hero-cellar.png` with the updated Figma `THG_Wine_Advisor 1` (`6:115`) asset showing `WINE | VINO — HABIBI` (instead of `THE PALACE COMPANY®`), rebuild, push to GitHub, and redeploy to Cloudflare Pages

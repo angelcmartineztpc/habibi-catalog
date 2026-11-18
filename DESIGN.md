@@ -61,7 +61,7 @@
 ## 3. Core Screen Specifications (Figma `Main`)
 
 1. **Home Hero (`6:114` / `11:69`)**:
-   - Full-bleed stone cellar & wine bottle hero (`THG_Wine_Advisor 1`) with `WINE | VINO — THE PALACE COMPANY®` branding.
+   - Full-bleed stone cellar & wine bottle hero (`THG_Wine_Advisor 1`) with `WINE | VINO — HABIBI` branding.
    - Top bar with `HABIBI` logo, `ENG / ES` switch, and `MXN` currency selector.
    - 5 bottom category cards (`198×150px`, `border-radius: 24px`): `Vinos`, `Cervezas`, `Sakes`, `Licores`, `Cortes` (`20 resultados`).
 2. **Catalog Grid (`21:89`, `146:62675`)**:
