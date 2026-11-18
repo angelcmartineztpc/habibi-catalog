@@ -25,7 +25,7 @@ export default function HomePage() {
     >
       <div className={styles.heroBackground} data-node-id="146:62605">
         <img
-          src="/assets/figma/hero-cellar.png"
+          src="/assets/figma/hero-cellar.png?v=2"
           alt="Habibi Wine Cellar"
           className={styles.heroImage}
         />

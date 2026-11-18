@@ -27,7 +27,7 @@ export default function CatalogPage() {
       {!isMap && (
         <div className={styles.blurredBackground} aria-hidden="true">
           <img
-            src="/assets/figma/hero-cellar.png"
+            src="/assets/figma/hero-cellar.png?v=2"
             alt=""
             className={styles.bgImage}
           />
