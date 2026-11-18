@@ -14,8 +14,9 @@ export function AppRoutes() {
   return (
     <Suspense fallback={<div aria-busy="true">Cargando Habibi...</div>}>
       <Routes>
-        <Route path="/" element={<CatalogPage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/home" element={<HomePage />} />
+        <Route path="/catalogo" element={<CatalogPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Suspense>

@@ -30,10 +30,10 @@ export function Menu({
   };
 
   const handleLogoClick = () => {
-    if (location.pathname === '/home') {
-      navigate('/');
+    if (location.pathname === '/' || location.pathname === '/home') {
+      navigate('/catalogo');
     } else {
-      navigate('/home');
+      navigate('/');
     }
   };
 

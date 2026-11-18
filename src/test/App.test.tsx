@@ -60,7 +60,13 @@ describe('Habibi Digital Catalog (Figma Main Flow & Approved Map 238:87313)', ()
 
   it('renders the approved Map view (238:87313) with glowing country silhouette, Sleek Right Liquid Glass Panel, and dynamic country switching', async () => {
     const user = userEvent.setup();
-    render(<App initialViewMode="map" />);
+    render(
+      <CatalogProvider initialViewMode="map">
+        <MemoryRouter initialEntries={['/catalogo']}>
+          <AppRoutes />
+        </MemoryRouter>
+      </CatalogProvider>,
+    );
 
     expect(await screen.findByAltText('HABIBI')).toBeInTheDocument();
 
@@ -97,7 +103,13 @@ describe('Habibi Digital Catalog (Figma Main Flow & Approved Map 238:87313)', ()
 
   it('switches from Map view to Grid view (21:89), opens Product Detail Drawer (26:540), adds to Cart, and opens Cart Drawer (212:111524)', async () => {
     const user = userEvent.setup();
-    render(<App initialViewMode="grid" />);
+    render(
+      <CatalogProvider initialViewMode="grid">
+        <MemoryRouter initialEntries={['/catalogo']}>
+          <AppRoutes />
+        </MemoryRouter>
+      </CatalogProvider>,
+    );
 
     expect(await screen.findByText('Reserva Malbec')).toBeInTheDocument();
     expect(screen.getByText('Cabernet Reserva')).toBeInTheDocument();
@@ -143,7 +155,13 @@ describe('Habibi Digital Catalog (Figma Main Flow & Approved Map 238:87313)', ()
 
   it('filters by search query and displays the Empty State (175:96840) when no wines match', async () => {
     const user = userEvent.setup();
-    render(<App initialViewMode="grid" />);
+    render(
+      <CatalogProvider initialViewMode="grid">
+        <MemoryRouter initialEntries={['/catalogo']}>
+          <AppRoutes />
+        </MemoryRouter>
+      </CatalogProvider>,
+    );
 
     const searchInput = await screen.findByPlaceholderText(/Buscar un vino.../i);
     await user.type(searchInput, 'inexistentexyz');
@@ -155,15 +173,9 @@ describe('Habibi Digital Catalog (Figma Main Flow & Approved Map 238:87313)', ()
     ).toBeInTheDocument();
   });
 
-  it('renders the Home Hero page (6:114) at /home with all 5 category cards and switches language ENG/ES', async () => {
+  it('renders the Home Hero page (6:114) as the initial landing screen at / with all 5 category cards and switches language ENG/ES', async () => {
     const user = userEvent.setup();
-    render(
-      <CatalogProvider initialViewMode="grid">
-        <MemoryRouter initialEntries={['/home']}>
-          <AppRoutes />
-        </MemoryRouter>
-      </CatalogProvider>,
-    );
+    render(<App />);
 
     expect(await screen.findByAltText('Habibi Wine Cellar')).toBeInTheDocument();
     expect(screen.getAllByText(/20 resultados/i)).toHaveLength(5);

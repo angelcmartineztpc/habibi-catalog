@@ -14,7 +14,7 @@ export default function HomePage() {
   const handleSelectCategory = (categoryId: CategoryId) => {
     setActiveCategory(categoryId);
     setViewMode('grid');
-    navigate('/');
+    navigate('/catalogo');
   };
 
   return (
