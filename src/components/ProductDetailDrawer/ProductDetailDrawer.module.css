@@ -1,0 +1,274 @@
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 616px;
+  height: 100%;
+  background-color: var(--bg-drawer);
+  box-shadow: var(--shadow-drawer);
+  z-index: 50;
+  outline: none;
+  animation: slideInRight 0.26s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.closeButton {
+  position: absolute;
+  top: 19px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background-color 0.2s ease;
+}
+
+.closeButton:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.closeIcon {
+  width: 44px;
+  height: 44px;
+  display: block;
+}
+
+.bottleOverlapWrapper {
+  position: absolute;
+  left: -154px;
+  top: calc(50% + 2px);
+  transform: translateY(-50%);
+  padding: 16px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.bottleViewport {
+  width: 386px;
+  height: 712px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bottleAspect {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  aspect-ratio: 264 / 450;
+  filter: drop-shadow(var(--shadow-bottle));
+}
+
+.bottleImage {
+  position: absolute;
+  height: 100%;
+  width: 171.82%;
+  left: -35.87%;
+  top: 0.88%;
+  max-width: none;
+}
+
+.descriptionColumn {
+  position: absolute;
+  left: 198px;
+  top: 149px;
+  width: 382px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  z-index: 8;
+}
+
+.infoStack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.nameBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.productTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-h1-size);
+  line-height: var(--text-h1-line);
+  font-weight: 400;
+  color: var(--text-gold);
+}
+
+.productSubtitle {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--text-sand);
+}
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--text-sand);
+  width: 100%;
+}
+
+.priceTextGroup {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.detailQtyGroup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.detailQtyBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-pill);
+  background-color: var(--bg-stepper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.15s ease;
+}
+
+.detailQtyBtn:hover {
+  opacity: 0.8;
+}
+
+.detailQtyIcon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.detailQtyValue {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  min-width: 12px;
+  text-align: center;
+}
+
+.priceValue {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+}
+
+.taxNote {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.descriptionText {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--text-sand);
+}
+
+.dividerLine {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(211, 205, 188, 0.22);
+}
+
+.metaStack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.metaLabel {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--text-sand);
+  opacity: 0.85;
+}
+
+.metaValue {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--text-sand);
+}
+
+.addToCartBtn {
+  width: 100%;
+  height: 52px;
+  padding: 12px 16px;
+  border-radius: var(--radius-pill);
+  background-color: var(--bg-cta-primary);
+  color: var(--text-primary);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.addToCartBtn:hover {
+  background-color: var(--bg-cta-primary-hover);
+}
+
+.addToCartBtn:active {
+  transform: scale(0.99);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

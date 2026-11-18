@@ -1,0 +1,96 @@
+{
+  "version": 2,
+  "skills": {
+    "awesome-design-md": {
+      "source": "wearescientist/awesome-design-md",
+      "commit": "6d732af371a8960feb6170e80425b2ce6a534b2c",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "f59e02a5892a0cd5fa22b3704026c3096408d3d68197da29c663a075dbd430d7"
+    },
+    "design-taste-frontend": {
+      "source": "Leonxlnx/taste-skill",
+      "commit": "f6b76575f949707b4e3c37cd86cb44b0b98643e8",
+      "sourceType": "github",
+      "skillPath": "skills/taste-skill/SKILL.md",
+      "computedHash": "b10eab0a9684cd09cf34c31ef04a3bf530a5f4404422f9c520d42372d670c7fc"
+    },
+    "frontend-ui-engineering": {
+      "source": "addyosmani/agent-skills",
+      "commit": "39b723ceebf81474d0557c1fecd01eddab585563",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-ui-engineering/SKILL.md",
+      "computedHash": "1bea3daa371bfb466445f5a33ee063f2aadf27469b2308a340e803398bcb4251"
+    },
+    "speckit-analyze": {
+      "source": "full-stack-skills/speckit-skills",
+      "commit": "e298e46c3c3250dfb747927197376c53b76c65a9",
+      "sourceType": "github",
+      "skillPath": "skills/speckit-analyze/SKILL.md",
+      "computedHash": "d09fd8bc2b9a6442903fbb2a2b7b85797dc9d5f6a9065c677e7eba82dea51c6e"
+    },
+    "speckit-baseline": {
+      "source": "full-stack-skills/speckit-skills",
+      "commit": "e298e46c3c3250dfb747927197376c53b76c65a9",
+      "sourceType": "github",
+      "skillPath": "skills/speckit-baseline/SKILL.md",
+      "computedHash": "0341c0dc4ba1fa88801c7085d3d8f8e5ac4a4dc7195103371ae94d80a375ce91"
+    },
+    "speckit-checklist": {
+      "source": "full-stack-skills/speckit-skills",
+      "commit": "e298e46c3c3250dfb747927197376c53b76c65a9",
+      "sourceType": "github",
+      "skillPath": "skills/speckit-checklist/SKILL.md",
+      "computedHash": "b68e7b7c8138dd58a5aa93c9ee0d6b4eda299fc399abb895b7740712f3b8846e"
+    },
+    "speckit-clarify": {
+      "source": "full-stack-skills/speckit-skills",
+      "commit": "e298e46c3c3250dfb747927197376c53b76c65a9",
+      "sourceType": "github",
+      "skillPath": "skills/speckit-clarify/SKILL.md",
+      "computedHash": "543961110e7cb09318e67884daa0941f56336a880cd28f7461539726e4d969fb"
+    },
+    "speckit-constitution": {
+      "source": "full-stack-skills/speckit-skills",
+      "commit": "e298e46c3c3250dfb747927197376c53b76c65a9",
+      "sourceType": "github",
+      "skillPath": "skills/speckit-constitution/SKILL.md",
+      "computedHash": "ef421a617afa3e1bf098350f4fee1148d1ce23c48fff8ed902a3aae52dcd64bc"
+    },
+    "speckit-implement": {
+      "source": "full-stack-skills/speckit-skills",
+      "commit": "e298e46c3c3250dfb747927197376c53b76c65a9",
+      "sourceType": "github",
+      "skillPath": "skills/speckit-implement/SKILL.md",
+      "computedHash": "b7ff87c801f1a5a534f72e21049dc9f8c43e555e63428936d8c01985c6bc9617"
+    },
+    "speckit-plan": {
+      "source": "full-stack-skills/speckit-skills",
+      "commit": "e298e46c3c3250dfb747927197376c53b76c65a9",
+      "sourceType": "github",
+      "skillPath": "skills/speckit-plan/SKILL.md",
+      "computedHash": "1d31e8fc24fd716b7ac46e31b3b55beaff6b98df48e40106b4b8ea79a93bc345"
+    },
+    "speckit-specify": {
+      "source": "full-stack-skills/speckit-skills",
+      "commit": "e298e46c3c3250dfb747927197376c53b76c65a9",
+      "sourceType": "github",
+      "skillPath": "skills/speckit-specify/SKILL.md",
+      "computedHash": "97657f1da527ff2cb74cbd23f10c87312eac523f12962f5f927cdfc778a2fd3c"
+    },
+    "speckit-tasks": {
+      "source": "full-stack-skills/speckit-skills",
+      "commit": "e298e46c3c3250dfb747927197376c53b76c65a9",
+      "sourceType": "github",
+      "skillPath": "skills/speckit-tasks/SKILL.md",
+      "computedHash": "c5798d0a343b7170dee24c6afba3c29390849e0558c8b018e58790e73b44c502"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "commit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "sourceType": "github",
+      "skillPath": "skills/web-design-guidelines/SKILL.md",
+      "computedHash": "4f68ae07187fb0d1fb78c88b503d089da4cf5a9d9625d1f2e425b1590bf96d92"
+    }
+  }
+}

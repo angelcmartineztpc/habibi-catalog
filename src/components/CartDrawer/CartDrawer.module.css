@@ -1,0 +1,199 @@
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 566px;
+  height: 100%;
+  background-color: var(--bg-drawer);
+  box-shadow: var(--shadow-drawer);
+  padding: 60px 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  z-index: 50;
+  outline: none;
+  overflow-y: auto;
+}
+
+.closeButton {
+  position: absolute;
+  top: 24px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.closeButton:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.closeIcon {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: var(--text-h2-size);
+  line-height: var(--text-h2-line);
+  font-weight: 400;
+  color: var(--text-gold);
+}
+
+.itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.itemCard {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-xl);
+  padding: 16px 24px 16px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.thumbContainer {
+  width: 46px;
+  height: 80px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.thumbAspect {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  aspect-ratio: 264 / 450;
+  overflow: hidden;
+  filter: drop-shadow(var(--shadow-bottle));
+}
+
+.thumbImg {
+  position: absolute;
+  height: 100%;
+  width: 171.82%;
+  left: -36%;
+  top: 0.08%;
+  max-width: none;
+}
+
+.itemBody {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.itemText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.itemTitle {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-gold);
+  line-height: 1.2;
+}
+
+.itemPrice {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.itemActions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.removeBtn {
+  height: 32px;
+  padding: 4px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 400;
+  color: #8c8c8c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.removeBtn:hover {
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.stepperPill {
+  background-color: var(--bg-stepper);
+  height: 32px;
+  padding: 4px 8px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.stepperBtn {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.15s ease;
+}
+
+.stepperBtn:hover {
+  opacity: 0.75;
+}
+
+.stepperIcon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.stepperQty {
+  width: 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.emptyMessage {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-sand);
+  opacity: 0.75;
+  padding: 24px 0;
+}

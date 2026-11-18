@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="france" clip-path="url(#clip0_0_470)">
+<path id="Vector" d="M7.99971 16.0001C12.418 16.0001 15.9997 12.4184 15.9997 8.00012C15.9997 3.58185 12.418 0.000124488 7.99971 0.000124488C3.58143 0.000124488 -0.000291997 3.58185 -0.000291997 8.00012C-0.000291997 12.4184 3.58143 16.0001 7.99971 16.0001Z" fill="#F5F5F5"/>
+<path id="Vector_2" d="M16 8.00001C16 4.5603 13.829 1.62795 10.7826 0.497608V15.5025C13.829 14.3721 16 11.4397 16 8.00001V8.00001Z" fill="#FF5053"/>
+<path id="Vector_3" d="M-2.52876e-05 8.00001C-2.52876e-05 11.4397 2.17101 14.3721 5.21738 15.5024V0.497608C2.17101 1.62795 -2.52876e-05 4.5603 -2.52876e-05 8.00001Z" fill="#0052B4"/>
+</g>
+<defs>
+<clipPath id="clip0_0_470">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

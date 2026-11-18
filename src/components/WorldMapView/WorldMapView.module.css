@@ -1,0 +1,499 @@
+.mapSection {
+  position: relative;
+  width: 100%;
+  height: 606px;
+  overflow: hidden;
+  background-color: #0d0b07;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapCanvas {
+  position: relative;
+  width: 1194px;
+  height: 606px;
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-origin: center center;
+}
+
+.mapImage {
+  width: 1194px;
+  height: 606px;
+  display: block;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Glowing Selected Country Silhouette Overlay (Figma 238:87313) */
+.countryGlowOverlay {
+  position: absolute;
+  pointer-events: none;
+  z-index: 4;
+  animation: countryPulseGlow 2.8s ease-in-out infinite alternate;
+}
+
+.countryGlowHalo {
+  position: absolute;
+  inset: -18px;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle,
+    rgba(252, 247, 232, 0.42) 0%,
+    rgba(212, 175, 55, 0.24) 45%,
+    rgba(212, 175, 55, 0) 75%
+  );
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.countrySilhouetteImg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(252, 247, 232, 0.85))
+    drop-shadow(0 0 22px rgba(212, 175, 55, 0.6))
+    drop-shadow(0 0 36px rgba(177, 142, 94, 0.4));
+}
+
+@keyframes countryPulseGlow {
+  0% {
+    opacity: 0.92;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.015);
+  }
+}
+
+.pinHitbox {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  z-index: 8;
+}
+
+.pinHitbox:hover {
+  transform: translate(-50%, -50%) scale(1.22);
+  background-color: rgba(211, 205, 188, 0.22);
+}
+
+.pinDot {
+  width: 9px;
+  height: 9px;
+  border-radius: var(--radius-pill);
+  background-color: rgba(211, 205, 188, 0.5);
+  border: 1.5px solid var(--fondo-arena);
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pinDotActive {
+  width: 12px;
+  height: 12px;
+  background-color: #fcf8e8;
+  border-color: #d4af37;
+  box-shadow: 0 0 0 5px rgba(252, 248, 232, 0.32),
+    0 0 14px rgba(212, 175, 55, 0.85);
+}
+
+.countryTag {
+  position: absolute;
+  min-width: 88px;
+  height: 40px;
+  padding: 10px 18px;
+  background-color: var(--fondo-arena);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-country-pill);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: var(--texto-oscuro);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+  z-index: 12;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.countryTag:hover {
+  background-color: #e6e0cf;
+  transform: translateY(-1px);
+}
+
+/* =========================================================================
+   Sleek Right-Side Liquid Glass Wine Selection Panel (Figma Node 238:87313)
+   ========================================================================= */
+.sleekRightPanel {
+  position: absolute;
+  top: 14px;
+  right: 78px;
+  width: 364px;
+  max-height: 576px;
+  padding: 18px;
+  border-radius: 26px;
+  background-color: rgba(34, 29, 20, 0.86);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(177, 142, 94, 0.42);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.48);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 16;
+}
+
+.panelHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.panelTopBadges {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.terroirPill {
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background-color: rgba(177, 142, 94, 0.22);
+  border: 1px solid rgba(177, 142, 94, 0.55);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  color: var(--text-gold-bright);
+  text-transform: uppercase;
+}
+
+.wineCountPill {
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background-color: var(--fondo-arena);
+  color: var(--texto-oscuro);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.panelTitleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.panelRegionTitle {
+  font-family: var(--font-display);
+  font-size: 28px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #fcf8e8;
+}
+
+.panelRegionSubtitle {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--primitive-stone-400);
+}
+
+.panelFilterTabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border-radius: var(--radius-pill);
+  background-color: rgba(20, 17, 11, 0.85);
+}
+
+.filterTabBtn {
+  padding: 5px 11px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--primitive-stone-400);
+  transition: background-color 0.18s ease, color 0.18s ease;
+  white-space: nowrap;
+}
+
+.filterTabBtn:hover {
+  color: var(--text-sand);
+}
+
+.filterTabBtnActive {
+  background-color: var(--fondo-arena);
+  color: var(--texto-oscuro);
+  font-weight: 500;
+}
+
+.panelCardList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  max-height: 310px;
+  padding-right: 2px;
+}
+
+.panelWineCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 18px;
+  background-color: rgba(23, 20, 14, 0.78);
+  border: 1px solid rgba(211, 205, 188, 0.16);
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.15s ease;
+}
+
+.panelWineCard:hover {
+  background-color: rgba(38, 33, 23, 0.88);
+}
+
+.panelWineCardSelected {
+  background-color: rgba(52, 44, 30, 0.94);
+  border: 1.5px solid rgba(212, 175, 55, 0.82);
+}
+
+.panelCardMainBtn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+
+.bottleThumb {
+  width: 42px;
+  height: 70px;
+  border-radius: 12px;
+  background-color: rgba(21, 18, 12, 0.78);
+  border: 1px solid rgba(211, 205, 188, 0.16);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.bottleThumbImg {
+  position: absolute;
+  width: 145%;
+  height: 92%;
+  left: -22.5%;
+  top: 4%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.wineCopyCol {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.wineStatusBadge {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--text-gold);
+  text-transform: uppercase;
+}
+
+.wineStatusBadgeSelected {
+  color: var(--text-gold-bright);
+}
+
+.wineCardTitle {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #fcf8e8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wineCardSubtitle {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--primitive-stone-400);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wineCardPrice {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-sand);
+}
+
+.cardStepperPill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 5px 9px;
+  border-radius: var(--radius-pill);
+  background-color: #16130d;
+  border: 1px solid rgba(212, 175, 55, 0.55);
+  flex-shrink: 0;
+}
+
+.stepperStepBtn {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--primitive-stone-400);
+  transition: color 0.15s ease;
+}
+
+.stepperStepBtn:hover {
+  color: #ffffff;
+}
+
+.stepperStepBtnPlus {
+  color: var(--text-gold-bright);
+}
+
+.stepperStepQty {
+  font-size: 12px;
+  font-weight: 500;
+  color: #ffffff;
+  min-width: 10px;
+  text-align: center;
+}
+
+.cardPlusBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-pill);
+  background-color: #16130d;
+  border: 1px solid rgba(211, 205, 188, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-sand);
+  font-size: 15px;
+  font-weight: 500;
+  flex-shrink: 0;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.cardPlusBtn:hover {
+  border-color: var(--text-gold);
+  transform: scale(1.06);
+}
+
+.panelFooterCta {
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: var(--radius-pill);
+  background-color: rgba(22, 19, 13, 0.9);
+  border: 1px solid rgba(177, 142, 94, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.panelFooterCta:hover {
+  background-color: rgba(41, 32, 20, 0.95);
+  border-color: var(--text-gold-bright);
+}
+
+.footerCtaLabel {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-sand);
+}
+
+.footerCtaExplore {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-gold-bright);
+}
+
+.closeButton {
+  position: absolute;
+  top: 17px;
+  right: 13px;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.closeButton:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.closeIcon {
+  width: 44px;
+  height: 44px;
+  display: block;
+}
+
+.zoomControl {
+  position: absolute;
+  right: 13px;
+  bottom: 8px;
+  width: 46px;
+  height: 92px;
+  background-color: var(--fondo-arena);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-zoom);
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 11px;
+}
+
+.zoomBtn {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.zoomBtn:hover {
+  opacity: 0.7;
+}
+
+.zoomBtn:active {
+  transform: scale(0.92);
+}
+
+.zoomIcon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}

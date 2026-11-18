@@ -1,0 +1,134 @@
+.card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-xl);
+  padding: 16px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  width: 100%;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  background-color: var(--bg-card-hover);
+  transform: translateY(-2px);
+}
+
+.cardBodyButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  text-align: center;
+}
+
+.imageContainer {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.bottleFrame {
+  height: 100%;
+  aspect-ratio: 264 / 450;
+  position: relative;
+  overflow: hidden;
+  filter: drop-shadow(var(--shadow-bottle));
+}
+
+.bottleImg {
+  position: absolute;
+  height: 100%;
+  width: 171.82%;
+  left: -36%;
+  top: 0.08%;
+  max-width: none;
+  pointer-events: none;
+}
+
+.textGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 158px;
+  white-space: nowrap;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-price);
+  line-height: 1.2;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-muted);
+  line-height: 1.2;
+}
+
+.cartBadge {
+  position: absolute;
+  top: 11px;
+  right: 10px;
+  height: 32px;
+  background-color: var(--bg-stepper);
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+
+.cartBadgeSingle {
+  width: 32px;
+  padding: 4px;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.cartBadgeSingle:hover {
+  background-color: #2b261b;
+  transform: scale(1.05);
+}
+
+.cartBadgeStepper {
+  padding: 4px 8px;
+  gap: 2px;
+}
+
+.stepperActionBtn {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-pill);
+  transition: opacity 0.15s ease;
+}
+
+.stepperActionBtn:hover {
+  opacity: 0.75;
+}
+
+.stepperIcon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.stepperCount {
+  width: 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-primary);
+}
